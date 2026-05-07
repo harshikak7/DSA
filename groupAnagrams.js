@@ -12,4 +12,4 @@ var groupAnagrams=function(strs){
     return Object.values(map);
 }
 
-console.log(groupAnagrams('cat','rat'))
+console.log(groupAnagrams(['anagram','eat','mat','tan']))
