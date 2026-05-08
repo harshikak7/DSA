@@ -1,10 +1,14 @@
 var containsDuplicate=function(nums){
-    nums.sort((a,b)=>a-b); //JS Sort uses string so convert to number sort
+    let hashset=new Set();
 
-    for(let i=1;i<nums.length;i++){
-        if(nums[i]===nums[i-1]){
+    for(let n of nums){
+        if(hashset.has(n)){
             return true
+        } else{
+            hashset.add(n)
         }
     }
-    return false;
+    return false
 }
+
+console.log(containsDuplicate([1,3,4,6,3,1]))
