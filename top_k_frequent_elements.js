@@ -1,13 +1,10 @@
 var topKFrequent=function(nums, k) {
     const count={}
-
-    for(let n of nums){
-        count[n]=(count[n]||0)+1
+    for(let num of nums){
+        count[num]=(count[num]||0)+1
     }
-
-    const arr=Object.entries(count).map(([n,freq])=>[freq,n])
+    const arr=Object.entries(count).map(([num,freq])=>[freq,parseInt(num)])
     arr.sort((a,b)=>b[0]-a[0])
-
     return arr.slice(0,k).map((pair)=>pair[1])
 }
 
